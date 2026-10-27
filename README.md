@@ -1,10 +1,14 @@
-# Spherical Cap and Force Chains
+# diskPacking
+Visualization for packing disks on a spherical surface with and without a defect and visualizing force chains.
 
-## Intro
-This repository contains Python scripts that pack disks on a spherical cap without overlap and find force chains within the arrangement. The spherical cap and disk parameters can be changed to the desired amounts. Originally done as part of my research in the MoSS Lab at Boston University
+The file *percolation_tester_FC_visualization.py* prompts user input for number of grains, touch threshold distance, and hemispherical shell parameters to output an interactive visualization of force chains, number of force chains, and the number of grains participating in the force chains.
 
-## Force Chain Success Rate
-The Python script sphericalCap_forceChainSuccessRate calculates the percentage of trials in which force chains are found for a input range of packing fractions and number of trials.
+![700 disks arranged on a hemispherical surface](/img/700grains.png)
+Here is an example showing 700 disks packed on a hemispherical surface with the highlighted disks being part of force chain networks.
 
-## Force Chain Visualizer
-The Python script sphericalCap_forceChainVisualization takes in a single packing fraction and returns the force chain success rate and a visualization of the force chain(s), if they exist.
+The file *percolation_tester_defect.py* has the same prompts and outputs as above and also takes into account granular vacancy defect size.  
+
+![600 disks with 6 mm radius defect arranged on a hemispherical surface](/img/600grains6mmDefect.png)
+Here is an example showing 600 disks with a 6 mm radius vacacny defect packed on a hemispherical surface with the highlighted disks being part of force chain networks.
+
+Both can also give you force chain and grain data for a range of grain values or defect sizes for a given number of simulation trials. A slight amount of randomness determined by the touch threshold allowed for statistics of force chain emergence.
